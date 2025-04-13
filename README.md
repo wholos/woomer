@@ -57,3 +57,12 @@ How to install in Arch!?
 ``` sh
 cp target/release/woomer /usr/bin/woomer
 ```
+
+All installing
+``` sh
+git clone https://github.com/woomer/
+cd woomer/
+export RUST_BACKTRACE-full
+cargo b --release
+cp target/release/woomer /usr/bin/woomer
+```
