@@ -33,18 +33,18 @@ Please also refer to: [Hyprland Wiki](https://wiki.hyprland.org/Configuring/XWay
 ## Building
 
 Dependencies:
+(To ARCHLINUX)
 
-- wayland-client
 - cmake
 - rust
 - pkg-config
 - clang (for compiling raylib)
-- libclang (for bindgen)
+- glfw
 
 Like with any other rust program you can run:
 
 ```sh
-cargo b
+cargo b --release
 ```
 
 However if you want hot reloading of the spotlight shader you can add the `dev` feature:
@@ -53,30 +53,7 @@ However if you want hot reloading of the spotlight shader you can add the `dev` 
 cargo b -F dev
 ```
 
-## Installing using the Nix flake
-
-You can also install woomer using the nix flake:
-
-```nix
-# flake.nix
-{
-  inputs = {
-    woomer.url = "github:coffeeispower/woomer";
-    # .....
-  }
-  # ....
-}
-```
-
-After that, you can just install it
-
-```nix
-{inputs, system, ...}:
-{
-  home.packages = [
-    inputs.woomer.packages.${system}.default
-    # ....
-  ];
-  # ....
-}
+How to install in Arch!?
+``` sh
+cp target/release/woomer /usr/bin/woomer
 ```
