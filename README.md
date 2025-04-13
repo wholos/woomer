@@ -63,6 +63,7 @@ All installing
 git clone https://github.com/woomer/
 cd woomer/
 export RUST_BACKTRACE-full
+cargo update
 cargo b --release
 cp target/release/woomer /usr/bin/woomer
 ```
