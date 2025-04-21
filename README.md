@@ -1,4 +1,4 @@
-# Woomer - Boomer but for wayland
+# Woomer - Boomer but for wayland and ArchLinux!
 
 Zoomer application for wayland (linux) inspired by [tsoding's boomer](https://github.com/tsoding/boomer) written in rust
 
@@ -60,10 +60,11 @@ cp target/release/woomer /usr/bin/woomer
 
 All installing
 ``` sh
+sudo pacman -S cmake clang rust glfw pkg-config
 git clone https://github.com/woomer/
 cd woomer/
-export RUST_BACKTRACE-full
+export RUST_BACKTRACE=full
 cargo update
 cargo b --release
-cp target/release/woomer /usr/bin/woomer
+sudo cp target/release/woomer /usr/bin/woomer
 ```
