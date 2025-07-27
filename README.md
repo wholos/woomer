@@ -1,4 +1,4 @@
-# Woomer - Boomer but for wayland and ArchLinux!
+# Woomer - Boomer but for wayland and ArchLinux (VOIDLINUX)!
 
 Zoomer application for wayland (linux) inspired by [tsoding's boomer](https://github.com/tsoding/boomer) written in rust
 
@@ -41,6 +41,18 @@ Dependencies:
 - clang (for compiling raylib)
 - glfw
 
+Dependencies:
+(To VOIDLINUX)
+
+- cmake
+- rust
+- cargo
+- pkg-config
+- clang (for compiling raylib)
+- glfw
+- glfw-devel
+- wayland-devel
+
 Like with any other rust program you can run:
 
 ```sh
@@ -53,14 +65,25 @@ However if you want hot reloading of the spotlight shader you can add the `dev` 
 cargo b -F dev
 ```
 
-How to install in Arch!?
+How to install in Arch and void!?
 ``` sh
 cp target/release/woomer /usr/bin/woomer
 ```
 
-All installing
+All installing (ON ARCH)
 ``` sh
-sudo pacman -S cmake clang rust glfw pkg-config
+pacman -S cmake clang rust glfw pkg-config
+git clone https://github.com/woomer/
+cd woomer/
+export RUST_BACKTRACE=full
+cargo update
+cargo b --release
+sudo cp target/release/woomer /usr/bin/woomer
+```
+
+All installing (ON VOID)
+``` sh
+xbps-install cmake clang rust cargo glfw glfw-devel wayland-devel pkg-config
 git clone https://github.com/woomer/
 cd woomer/
 export RUST_BACKTRACE=full
