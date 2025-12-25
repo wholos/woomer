@@ -1,4 +1,4 @@
-# Woomer - Boomer but for wayland and ArchLinux (VOIDLINUX)!
+# Woomer - Boomer but for wayland.
 
 Zoomer application for wayland (linux) inspired by [tsoding's boomer](https://github.com/tsoding/boomer) written in rust
 
