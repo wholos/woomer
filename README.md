@@ -53,41 +53,24 @@ Dependencies:
 - glfw-devel
 - wayland-devel
 
+How to build with make?
+``` sh
+make all
+```
+
 Like with any other rust program you can run:
 
 ```sh
-cargo b --release
+cargo build --release
 ```
 
 However if you want hot reloading of the spotlight shader you can add the `dev` feature:
 
 ```sh
-cargo b -F dev
+cargo build -F dev
 ```
 
-How to install in Arch and void!?
+How to install?
 ``` sh
 cp target/release/woomer /usr/bin/woomer
-```
-
-All installing (ON ARCH)
-``` sh
-pacman -S cmake clang rust glfw pkg-config
-git clone https://github.com/woomer/
-cd woomer/
-export RUST_BACKTRACE=full
-cargo update
-cargo b --release
-sudo cp target/release/woomer /usr/bin/woomer
-```
-
-All installing (ON VOID)
-``` sh
-xbps-install cmake clang rust cargo glfw glfw-devel wayland-devel pkg-config
-git clone https://github.com/woomer/
-cd woomer/
-export RUST_BACKTRACE=full
-cargo update
-cargo b --release
-sudo cp target/release/woomer /usr/bin/woomer
 ```
