@@ -1,3 +1,4 @@
+include config.mk
 all:
     @export RUST_BACKTRACE=full
     @cargo update
@@ -7,4 +8,4 @@ clean:
     @cargo clean
 
 install:
-    @cp target/release/woomer /usr/bin/woomer
+    @cp target/release/woomer $(pref)/woomer
